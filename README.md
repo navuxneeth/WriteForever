@@ -1,6 +1,6 @@
-# PicSeek - AI Chatbot with Large Output Capability 🚀
+# WriteForever - AI Chatbot with Large Output Capability 🚀
 
-A powerful AI chatbot website that can write up to 100 pages at a time, featuring a large token output window powered by advanced language models.
+A powerful AI chatbot website that can write up to 100 pages at a time, featuring a large token output window powered by advanced language models. Now with VT323 retro font, aesthetic pastel colors, and light/dark mode toggle!
 
 ## ✨ Features
 
@@ -9,7 +9,9 @@ A powerful AI chatbot website that can write up to 100 pages at a time, featurin
 - 💾 **Persistent Storage**: SQLite database for conversation history
 - ⚡ **Streaming Responses**: Real-time response streaming for better UX
 - 🆓 **Free to Use**: Uses free-tier API with generous limits
-- 🎨 **Modern UI**: Clean, responsive interface
+- 🎨 **Modern UI**: Clean, responsive interface with VT323 retro font
+- 🌈 **Aesthetic Pastel Theme**: Beautiful pastel color scheme for both light and dark modes
+- 🌙 **Light/Dark Mode**: Toggle between themes with persistence
 - 💬 **Multiple Conversations**: Create and manage multiple chat sessions
 
 ## 🚀 Quick Start
@@ -49,8 +51,9 @@ The application comes pre-configured with an API key, so you can start chatting 
 1. Click "**+ New Chat**" to start a conversation
 2. Type your message in the input box
 3. Press **Send** or **Ctrl+Enter** to submit
-4. Watch as the AI generates responses in real-time
-5. Request long-form content like:
+4. Toggle between light and dark mode using the 🌙/☀️ button
+5. Watch as the AI generates responses in real-time
+6. Request long-form content like:
    - "Write a comprehensive 50-page guide on web development"
    - "Create a detailed fantasy story spanning 100 pages"
    - "Generate an extensive research paper on AI ethics"
@@ -66,14 +69,14 @@ The application comes pre-configured with an API key, so you can start chatting 
 ## 📁 Project Structure
 
 ```
-PicSeek/
+WriteForever/
 ├── server.js           # Express server and API endpoints
 ├── src/
 │   └── database.js     # SQLite database layer
 ├── public/
 │   ├── index.html      # Frontend HTML
-│   ├── styles.css      # Styling
-│   └── app.js          # Frontend JavaScript
+│   ├── styles.css      # Styling with VT323 font and pastel theme
+│   └── app.js          # Frontend JavaScript with theme toggle
 ├── package.json        # Dependencies and scripts
 ├── .env.example        # Environment variables template
 └── README.md          # This file
@@ -164,4 +167,4 @@ Contributions are welcome! Feel free to:
 
 ---
 
-**Enjoy creating extensive content with PicSeek AI! 🎉**
+**Enjoy creating extensive content with WriteForever! 🎉**

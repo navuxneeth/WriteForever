@@ -2,6 +2,10 @@
 let currentConversationId = null;
 let isStreaming = false;
 
+// Theme management
+const savedTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', savedTheme);
+
 // DOM Elements
 const conversationsList = document.getElementById('conversationsList');
 const messagesContainer = document.getElementById('messagesContainer');
@@ -13,18 +17,35 @@ const sendBtnLoading = document.getElementById('sendBtnLoading');
 const newChatBtn = document.getElementById('newChatBtn');
 const chatTitle = document.getElementById('chatTitle');
 const deleteChatBtn = document.getElementById('deleteChatBtn');
+const themeToggle = document.getElementById('themeToggle');
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', () => {
     loadConversations();
     setupEventListeners();
+    updateThemeIcon();
 });
+
+// Theme toggle function
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon();
+}
+
+function updateThemeIcon() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    themeToggle.textContent = currentTheme === 'light' ? '🌙' : '☀️';
+}
 
 // Event Listeners
 function setupEventListeners() {
     messageForm.addEventListener('submit', handleMessageSubmit);
     newChatBtn.addEventListener('click', createNewConversation);
     deleteChatBtn.addEventListener('click', deleteCurrentConversation);
+    themeToggle.addEventListener('click', toggleTheme);
     
     // Auto-resize textarea
     messageInput.addEventListener('input', () => {
@@ -124,7 +145,7 @@ async function loadConversation(id) {
             messagesContainer.innerHTML = `
                 <div class="welcome-message">
                     <h2>New Conversation Started! 💬</h2>
-                    <p>Start chatting by typing a message below. This AI can generate extensive content:</p>
+                    <p>Start chatting by typing a message below. WriteForever can generate extensive content:</p>
                     <ul>
                         <li>Ask for detailed explanations or tutorials</li>
                         <li>Request long-form content like articles or stories</li>
@@ -168,7 +189,7 @@ async function deleteCurrentConversation() {
         deleteChatBtn.style.display = 'none';
         messagesContainer.innerHTML = `
             <div class="welcome-message">
-                <h2>Welcome to PicSeek AI Chatbot! 🚀</h2>
+                <h2>Welcome to WriteForever! 🚀</h2>
                 <p>This chatbot is powered by advanced AI models capable of generating extensive content:</p>
                 <ul>
                     <li>✍️ Write up to 100 pages at a time</li>

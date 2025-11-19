@@ -1,7 +1,7 @@
 {
-  "name": "picseek",
+  "name": "writeforever",
   "version": "1.0.0",
-  "description": "AI Chatbot with large token output capability - write up to 100 pages at a time",
+  "description": "WriteForever - AI Chatbot with large token output capability - write up to 100 pages at a time",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
