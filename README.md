@@ -17,7 +17,6 @@ A powerful AI chatbot website that can write up to 100 pages at a time, featurin
 ### Prerequisites
 
 - Node.js 14+ installed
-- A free Groq API key (optional but recommended)
 
 ### Installation
 
@@ -32,37 +31,20 @@ A powerful AI chatbot website that can write up to 100 pages at a time, featurin
    npm install
    ```
 
-3. **Configure API Key (Optional)**
-   
-   For full AI capabilities, get a free Groq API key:
-   - Visit [https://console.groq.com](https://console.groq.com)
-   - Sign up for a free account
-   - Create an API key
-   - Copy `.env.example` to `.env`:
-     ```bash
-     cp .env.example .env
-     ```
-   - Add your API key to `.env`:
-     ```
-     GROQ_API_KEY=your_actual_api_key_here
-     ```
-
-4. **Start the server**
+3. **Start the server**
    ```bash
    npm start
    ```
 
-5. **Open in browser**
+   The API key is pre-configured in the `.env` file, so you can start using the chatbot immediately!
+
+4. **Open in browser**
    
    Navigate to `http://localhost:3000`
 
 ## 🎯 Usage
 
-### Without API Key (Demo Mode)
-
-The application will run in demo mode and provide instructions on how to enable full AI capabilities.
-
-### With API Key
+The application comes pre-configured with an API key, so you can start chatting immediately:
 
 1. Click "**+ New Chat**" to start a conversation
 2. Type your message in the input box
@@ -99,9 +81,9 @@ PicSeek/
 
 ## 🔧 Configuration
 
-Edit the `.env` file to configure:
+The application comes pre-configured with a Groq API key in the `.env` file. You can edit this file to configure:
 
-- `GROQ_API_KEY`: Your Groq API key
+- `GROQ_API_KEY`: Pre-configured Groq API key (you can replace with your own if desired)
 - `PORT`: Server port (default: 3000)
 
 ## 📊 API Endpoints
@@ -142,10 +124,6 @@ The application uses Groq's free tier which offers:
 
 ## 🐛 Troubleshooting
 
-### "Running in DEMO mode" message
-- You haven't set up a Groq API key
-- Follow the configuration steps above to enable AI
-
 ### Port already in use
 - Change the `PORT` in `.env` file
 - Or stop the process using port 3000
@@ -153,6 +131,11 @@ The application uses Groq's free tier which offers:
 ### Database errors
 - Delete `chat.db` file to reset database
 - Restart the server
+
+### API Key Issues
+- The repository comes with a pre-configured API key
+- If you see authentication errors, the API key may have been revoked
+- You can get a new free API key at [https://console.groq.com](https://console.groq.com) and update it in the `.env` file
 
 ## 📝 License
 
