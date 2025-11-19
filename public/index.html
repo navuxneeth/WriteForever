@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicSeek AI Chatbot - Large Output Capable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>💬 PicSeek AI</h1>
+                <button id="newChatBtn" class="new-chat-btn">+ New Chat</button>
+            </div>
+            <div class="conversations-list" id="conversationsList">
+                <!-- Conversations will be loaded here -->
+            </div>
+            <div class="sidebar-footer">
+                <div class="info-box">
+                    <p><strong>✨ Features:</strong></p>
+                    <ul>
+                        <li>Up to 100 pages output</li>
+                        <li>Large context window</li>
+                        <li>Conversation history</li>
+                        <li>Free to use</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <div class="chat-header">
+                <h2 id="chatTitle">Select or create a new chat</h2>
+                <button id="deleteChatBtn" class="delete-btn" style="display: none;">🗑️ Delete Chat</button>
+            </div>
+            
+            <div class="messages-container" id="messagesContainer">
+                <div class="welcome-message">
+                    <h2>Welcome to PicSeek AI Chatbot! 🚀</h2>
+                    <p>This chatbot is powered by advanced AI models capable of generating extensive content:</p>
+                    <ul>
+                        <li>✍️ Write up to 100 pages at a time</li>
+                        <li>🧠 Large context window for complex tasks</li>
+                        <li>💾 Persistent conversation history</li>
+                        <li>⚡ Streaming responses for real-time output</li>
+                        <li>🆓 Completely free to use</li>
+                    </ul>
+                    <p><strong>Get started:</strong> Create a new chat or ask me anything!</p>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <form id="messageForm">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Type your message here... (Ask me to write a long document, story, or article!)"
+                        rows="3"
+                    ></textarea>
+                    <button type="submit" id="sendBtn">
+                        <span id="sendBtnText">Send</span>
+                        <span id="sendBtnLoading" style="display: none;">●●●</span>
+                    </button>
+                </form>
+                <div class="input-info">
+                    💡 <strong>Tip:</strong> This AI can generate very long responses. Try asking for detailed articles, comprehensive guides, or extensive stories!
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

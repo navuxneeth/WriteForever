@@ -1,1 +1,184 @@
-# PicSeek
+# PicSeek - AI Chatbot with Large Output Capability 🚀
+
+A powerful AI chatbot website that can write up to 100 pages at a time, featuring a large token output window powered by advanced language models.
+
+## ✨ Features
+
+- 📝 **Large Token Output**: Generate extensive content up to 100 pages
+- 🧠 **Powerful AI Model**: Powered by Llama 3.1 70B via Groq API
+- 💾 **Persistent Storage**: SQLite database for conversation history
+- ⚡ **Streaming Responses**: Real-time response streaming for better UX
+- 🆓 **Free to Use**: Uses free-tier API with generous limits
+- 🎨 **Modern UI**: Clean, responsive interface
+- 💬 **Multiple Conversations**: Create and manage multiple chat sessions
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 14+ installed
+- A free Groq API key (optional but recommended)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/navuxneeth/PicSeek.git
+   cd PicSeek
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure API Key (Optional)**
+   
+   For full AI capabilities, get a free Groq API key:
+   - Visit [https://console.groq.com](https://console.groq.com)
+   - Sign up for a free account
+   - Create an API key
+   - Copy `.env.example` to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Add your API key to `.env`:
+     ```
+     GROQ_API_KEY=your_actual_api_key_here
+     ```
+
+4. **Start the server**
+   ```bash
+   npm start
+   ```
+
+5. **Open in browser**
+   
+   Navigate to `http://localhost:3000`
+
+## 🎯 Usage
+
+### Without API Key (Demo Mode)
+
+The application will run in demo mode and provide instructions on how to enable full AI capabilities.
+
+### With API Key
+
+1. Click "**+ New Chat**" to start a conversation
+2. Type your message in the input box
+3. Press **Send** or **Ctrl+Enter** to submit
+4. Watch as the AI generates responses in real-time
+5. Request long-form content like:
+   - "Write a comprehensive 50-page guide on web development"
+   - "Create a detailed fantasy story spanning 100 pages"
+   - "Generate an extensive research paper on AI ethics"
+
+## 🛠️ Technical Stack
+
+- **Backend**: Node.js with Express
+- **Database**: SQLite3
+- **AI API**: Groq (Llama 3.1 70B model)
+- **Frontend**: Vanilla JavaScript, HTML5, CSS3
+- **Streaming**: Server-Sent Events (SSE)
+
+## 📁 Project Structure
+
+```
+PicSeek/
+├── server.js           # Express server and API endpoints
+├── src/
+│   └── database.js     # SQLite database layer
+├── public/
+│   ├── index.html      # Frontend HTML
+│   ├── styles.css      # Styling
+│   └── app.js          # Frontend JavaScript
+├── package.json        # Dependencies and scripts
+├── .env.example        # Environment variables template
+└── README.md          # This file
+```
+
+## 🔧 Configuration
+
+Edit the `.env` file to configure:
+
+- `GROQ_API_KEY`: Your Groq API key
+- `PORT`: Server port (default: 3000)
+
+## 📊 API Endpoints
+
+- `GET /api/conversations` - List all conversations
+- `POST /api/conversations` - Create new conversation
+- `GET /api/conversations/:id/messages` - Get messages for a conversation
+- `DELETE /api/conversations/:id` - Delete a conversation
+- `POST /api/chat` - Send message and get AI response (streaming)
+
+## 🌟 Key Capabilities
+
+### Large Token Output
+The chatbot is configured to handle very large responses:
+- Maximum tokens: 8000+ per response
+- Can generate book-length content in a single interaction
+- Supports complex, multi-part responses
+
+### Streaming Response
+Real-time streaming ensures:
+- Immediate feedback as AI generates content
+- Better user experience for long responses
+- Ability to see content being created
+
+### Conversation Management
+- Create multiple chat sessions
+- Persistent conversation history
+- Delete unwanted conversations
+- Context-aware responses based on chat history
+
+## 🆓 Free Tier Details
+
+The application uses Groq's free tier which offers:
+- Generous request limits
+- Fast inference times
+- Access to powerful Llama 3.1 models
+- No credit card required for basic usage
+
+## 🐛 Troubleshooting
+
+### "Running in DEMO mode" message
+- You haven't set up a Groq API key
+- Follow the configuration steps above to enable AI
+
+### Port already in use
+- Change the `PORT` in `.env` file
+- Or stop the process using port 3000
+
+### Database errors
+- Delete `chat.db` file to reset database
+- Restart the server
+
+## 📝 License
+
+MIT License - feel free to use this project for any purpose!
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest features
+- Submit pull requests
+
+## 💡 Tips for Best Results
+
+1. **Be specific**: Detailed prompts yield better results
+2. **Request structure**: Ask for specific formats (chapters, sections, etc.)
+3. **Iterate**: Follow up on responses to refine content
+4. **Save conversations**: Use multiple chats to organize different topics
+5. **Explore limits**: Test the boundaries of the large output capability
+
+## 🔗 Links
+
+- [Groq Console](https://console.groq.com) - Get your free API key
+- [Groq Documentation](https://console.groq.com/docs) - API documentation
+- [GitHub Repository](https://github.com/navuxneeth/PicSeek)
+
+---
+
+**Enjoy creating extensive content with PicSeek AI! 🎉**
